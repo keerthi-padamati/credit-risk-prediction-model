@@ -2,6 +2,25 @@
 
 An end-to-end Machine Learning web application that predicts whether a credit card application is likely to be approved based on applicant demographic and financial information.
 
+---
+
+## 🌐 Live Deployment & Links
+
+* **Live Web Application**: [https://credit-card-approval-prediction.onrender.com](https://credit-card-approval-prediction.onrender.com)
+* **GitHub Repository**: [https://github.com/keerthi-padamati/credit-risk-prediction-model.git](https://github.com/keerthi-padamati/credit-risk-prediction-model.git)
+
+---
+
+## 🛠️ Render Deployment Settings
+
+If deploying or managing manually on Render:
+* **Environment**: `Python 3`
+* **Build Command**: `pip install -r requirements.txt && python train.py`
+* **Start Command**: `gunicorn app:app`
+* **Python Version**: `3.11.8` (or `3.12`)
+
+---
+
 ## ✨ Features
 
 * Automated data preprocessing and feature engineering
@@ -12,10 +31,13 @@ An end-to-end Machine Learning web application that predicts whether a credit ca
 * Real-time predictions using a Flask web application
 * Simple and responsive user interface
 
+---
+
 ## 🛠️ Technologies Used
 
 * Python
 * Flask
+* Gunicorn
 * Scikit-learn
 * XGBoost
 * Pandas
@@ -25,6 +47,8 @@ An end-to-end Machine Learning web application that predicts whether a credit ca
 * HTML
 * CSS
 * JavaScript
+
+---
 
 ## 📂 Project Structure
 
@@ -48,9 +72,13 @@ credit-card-approval-prediction/
 ├── app.py
 ├── train.py
 ├── requirements.txt
+├── Procfile
+├── render.yaml
 ├── .gitignore
 └── README.md
 ```
+
+---
 
 ## 🚀 Installation and Setup
 
@@ -105,6 +133,8 @@ Open your browser and visit:
 http://127.0.0.1:5000
 ```
 
+---
+
 ## 📊 How It Works
 
 1. The user enters applicant information.
@@ -112,4 +142,3 @@ http://127.0.0.1:5000
 3. The trained machine learning model analyzes the data.
 4. The system predicts the approval result.
 5. The result is displayed instantly in the web application.
-

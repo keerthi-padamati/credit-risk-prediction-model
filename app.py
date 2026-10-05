@@ -10,10 +10,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, 'model.pkl')
 ENCODERS_PATH = os.path.join(BASE_DIR, 'encoders.pkl')
 
-if not os.path.exists(MODEL_PATH) and os.path.exists('model.pkl'):
-    MODEL_PATH = 'model.pkl'
-if not os.path.exists(ENCODERS_PATH) and os.path.exists('encoders.pkl'):
-    ENCODERS_PATH = 'encoders.pkl'
+if not os.path.exists(MODEL_PATH) and os.path.exists(os.path.join(BASE_DIR, 'Credit_Card Approval', 'model.pkl')):
+    MODEL_PATH = os.path.join(BASE_DIR, 'Credit_Card Approval', 'model.pkl')
+if not os.path.exists(ENCODERS_PATH) and os.path.exists(os.path.join(BASE_DIR, 'Credit_Card Approval', 'encoders.pkl')):
+    ENCODERS_PATH = os.path.join(BASE_DIR, 'Credit_Card Approval', 'encoders.pkl')
 
 try:
     with open(MODEL_PATH, 'rb') as f:
