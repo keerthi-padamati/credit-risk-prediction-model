@@ -13,11 +13,11 @@ An end-to-end Machine Learning web application that predicts whether a credit ca
 
 ## 🛠️ Render Deployment Settings
 
-If deploying or managing manually on Render:
-* **Environment**: `Python 3`
-* **Build Command**: `pip install -r requirements.txt && python train.py`
+If deploying or configuring manually on Render:
+* **Environment / Runtime**: `Python 3`
+* **Python Version**: `3.11.8` (configured via `.python-version`)
+* **Build Command**: `python -m pip install --upgrade pip setuptools wheel && pip install -r requirements.txt && python train.py`
 * **Start Command**: `gunicorn app:app`
-* **Python Version**: `3.11.8` (or `3.12`)
 
 ---
 
@@ -74,6 +74,7 @@ credit-card-approval-prediction/
 ├── requirements.txt
 ├── Procfile
 ├── render.yaml
+├── .python-version
 ├── .gitignore
 └── README.md
 ```
@@ -108,6 +109,7 @@ source venv/bin/activate
 ### 3. Install Dependencies
 
 ```bash
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 ```
 

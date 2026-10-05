@@ -2,7 +2,7 @@ services:
   - type: web
     name: credit-card-approval-prediction
     env: python
-    buildCommand: "pip install -r requirements.txt && python train.py"
+    buildCommand: "python -m pip install --upgrade pip setuptools wheel && pip install -r requirements.txt && python train.py"
     startCommand: "gunicorn app:app"
     envVars:
       - key: PYTHON_VERSION
